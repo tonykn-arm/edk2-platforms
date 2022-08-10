@@ -51,6 +51,7 @@
 
   # GIC
   gArmSgiTokenSpaceGuid.PcdGicSize|0|UINT64|0x0000000A
+  gArmSgiTokenSpaceGuid.PcdGicItsCount|6|UINT32|0x00000028
 
   gArmSgiTokenSpaceGuid.PcdSmcCs0Base|0|UINT64|0x0000000C
   gArmSgiTokenSpaceGuid.PcdSmcCs1Base|0|UINT64|0x0000000D
