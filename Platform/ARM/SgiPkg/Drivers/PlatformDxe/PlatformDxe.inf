@@ -41,6 +41,7 @@
   gArmSgiTokenSpaceGuid.PcdVirtioBlkSize
   gArmSgiTokenSpaceGuid.PcdVirtioNetBaseAddress
   gArmSgiTokenSpaceGuid.PcdVirtioNetSize
+  gArmPlatformTokenSpaceGuid.PcdSerialDbgRegisterBase
 
 [Depex]
   TRUE
