@@ -171,6 +171,12 @@ ArmPlatformGetVirtualMemoryMap (
   VirtualMemoryTable[Index].Length          = SIZE_64KB;
   VirtualMemoryTable[Index].Attributes      = ARM_MEMORY_REGION_ATTRIBUTE_DEVICE;
 
+  // Expansion AXI - Debug UART
+  VirtualMemoryTable[++Index].PhysicalBase  = FixedPcdGet64 (PcdSerialDbgRegisterBase);
+  VirtualMemoryTable[Index].VirtualBase     = FixedPcdGet64 (PcdSerialDbgRegisterBase);
+  VirtualMemoryTable[Index].Length          = SIZE_64KB;
+  VirtualMemoryTable[Index].Attributes      = ARM_MEMORY_REGION_ATTRIBUTE_DEVICE;
+
   // DDR - (2GB - 16MB)
   VirtualMemoryTable[++Index].PhysicalBase  = PcdGet64 (PcdSystemMemoryBase);
   VirtualMemoryTable[Index].VirtualBase     = PcdGet64 (PcdSystemMemoryBase);
